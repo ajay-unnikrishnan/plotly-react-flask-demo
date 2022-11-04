@@ -1,0 +1,8 @@
+/API/venv_api/
+.idea/inspectionProfiles/profiles_settings.xml
+.gitignore
+.idea/vcs.xml
+.idea/plotly_poc.iml
+.idea/modules.xml
+.idea/misc.xml
+API/__pycache__/app.cpython-38.pyc
