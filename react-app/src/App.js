@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { PlotlyGraphFromAPI } from './Components/plotly';
+import { PlotlyClientSide } from './Components/plotly-client-side';
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" /> 
         <br/>       
-        <PlotlyGraphFromAPI />        
+        <PlotlyGraphFromAPI /> 
+        <br/>
+        <PlotlyClientSide />       
       </header>      
     </div>
   );

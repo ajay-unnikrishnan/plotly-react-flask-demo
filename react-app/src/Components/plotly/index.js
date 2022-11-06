@@ -11,7 +11,7 @@ export class PlotlyGraphFromAPI extends React.Component {
         }
     }
     async componentDidMount() {         
-        const response = await this.service.get_apple_stock_graph_plot()
+        const response = await this.service.getAppleStockGraphPlot()
         this.setState({plot:response.data})
     }
     render() {

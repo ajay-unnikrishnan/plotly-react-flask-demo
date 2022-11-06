@@ -34,4 +34,14 @@ def get_csv_data():
     df = pd.read_csv('apple_stock_price.csv')
     fig = px.line(df, x="AAPL_x", y="AAPL_y", 
               title='Apple stock price')
-    return json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)           
+    return json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder) 
+
+
+@app.route('/get-apple-stock-data')
+def get_apple_stocks_data():
+    df = pd.read_csv('apple_stock_price.csv')
+    stock_data = {
+        'x': df['AAPL_x'].to_numpy().tolist(),
+        'y': df['AAPL_y'].to_numpy().tolist()
+    }
+    return json.dumps(stock_data)
